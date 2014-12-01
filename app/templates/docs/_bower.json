@@ -1,0 +1,11 @@
+{
+  "name": "<%= appName %>Docs",
+  "version": "0.0.0",
+  "dependencies": {
+    "modernizr": "2.8.x",
+    "angular": "<%= props.angularVersion %>",
+    "<%= props.jQuery.name %>": "<%= props.jQuery.version %>",
+    "bootstrap": "3.2.x",
+    "google-code-prettify": "1.0.1"
+  }
+}

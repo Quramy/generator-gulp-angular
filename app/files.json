@@ -5,13 +5,37 @@
     "gulp/server.js",
     "gulp/proxy.js",
     "gulp/unit-tests.js",
+    "gulp/docs.js",
     "src/favicon.ico",
     "src/404.html",
     "src/assets/images/yeoman.png",
     "karma.conf.js",
     "protractor.conf.js",
     "e2e/main.po.js",
-    "e2e/main.spec.js"
+    "e2e/main.spec.js",
+    
+    "docs/.bowerrc",
+    "docs/config/processors/navigation.js",
+    "docs/config/services/deployments/debug.js",
+    "docs/config/services/deployments/default.js",
+    "docs/config/templates/area-data.template.js",
+    "docs/config/templates/nav-data.template.js",
+    "docs/config/templates/base.template.html",
+    "docs/config/templates/module.template.html",
+
+    "docs/app/index.html",
+    "docs/app/src/index.js",
+    "docs/app/src/a.directive.js",
+    "docs/app/src/pre.directive.js",
+    "docs/app/src/docs.controller.js",
+    "docs/app/src/navbar.controller.js",
+    "docs/app/src/main.html",
+    "docs/app/styles/docs.css",
+
+    "docs/content/index.ngdoc",
+    "docs/content/api.ngdoc",
+    "docs/content/guide.ngdoc",
+    "docs/content/guide/howToUse.ngdoc"
   ],
   "dotFiles": [
     "bowerrc",
@@ -34,6 +58,10 @@
     "src/app/main/main.controller.js",
     "src/app/main/main.controller.spec.js",
 
-    "src/components/navbar/navbar.controller.js"
+    "src/components/navbar/navbar.controller.js",
+
+    "docs/bower.json",
+    "docs/config/index.js",
+    "docs/app/src/navbar.html"
   ]
 }

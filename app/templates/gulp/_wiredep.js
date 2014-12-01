@@ -13,3 +13,15 @@ gulp.task('wiredep', function () {
     }))
     .pipe(gulp.dest('src'));
 });
+
+gulp.task('wiredep:docs', function() {
+  var wiredep = require('wiredep').stream;
+
+  return gulp.src('docs/src/index.html')
+    .pipe(wiredep({
+      bowerJson: require('../docs/bower.json'),
+      directory: 'docs/bower_components',
+      exclude: [/bootstrap-sass-official/, /bootstrap.js/, /open-sans-fontface/]
+    }))
+    .pipe(gulp.dest('docs/src'));
+});

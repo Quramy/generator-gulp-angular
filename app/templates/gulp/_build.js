@@ -114,7 +114,7 @@ gulp.task('misc', function () {
 });
 
 gulp.task('clean', function (done) {
-  $.del(['dist/', '.tmp/'], done);
+  $.del(['dist/', '.tmp/', 'dist_docs/', '.tmp_docs'], done);
 });
 
 gulp.task('build', ['html', 'images', 'fonts', 'misc']);
