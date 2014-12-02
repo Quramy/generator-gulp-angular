@@ -1,26 +1,25 @@
 'use strict';
 
-angular.module('docApp').directive('a', function (DOCS_OVERWRITELINK, DOCS_AREA_DATA){
+angular.module('docApp').directive('a', function (DOCS_OVERWRITELINK, DOCS_AREA_DATA) {
   var linkCache = {};
-  var isRewrite = function (link){
+  var isRewrite = function (link) {
     var res = link.indexOf('#/') === -1;
     if(!res){
       return false;
     }
     res = false;
-    angular.forEach(DOCS_AREA_DATA, function (area){
+    angular.forEach(DOCS_AREA_DATA, function (area) {
       res = res || link.indexOf(area) === 0; 
     });
     return res;
   };
   return {
     restrict: 'E',
-    priprity: 100,
-    link: function ($scope, $elem, $attrs){
+    link: function ($scope, $elem, $attrs) {
       if(!DOCS_OVERWRITELINK){
         return;
       }
-      setTimeout(function (){
+      $scope.$evalAsync(function () {
         var link = $elem.attr('href'), newLink;
         newLink = linkCache[link];
         if(!newLink){
@@ -30,7 +29,7 @@ angular.module('docApp').directive('a', function (DOCS_OVERWRITELINK, DOCS_AREA_
           }
         }
         $elem.attr('href', newLink);
-      }, 0);
+      });
     }
   };
 });

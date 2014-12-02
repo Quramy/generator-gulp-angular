@@ -10,7 +10,9 @@ module.exports = function debugDeployment() {
 					'../../deps/angular/angular.js',
 					'../../modules.js'
 				],
-				stylesheets: []
+				stylesheets: [
+					'../../modules.css'
+        ]
 			},
 			dependencyPath: '../../deps'
 		}

@@ -5,7 +5,9 @@
     "gulp/server.js",
     "gulp/proxy.js",
     "gulp/unit-tests.js",
+    "gulp/module.js",
     "gulp/docs.js",
+    "gulp/dgeni.js",
     "src/favicon.ico",
     "src/404.html",
     "src/assets/images/yeoman.png",
@@ -20,6 +22,7 @@
     "docs/config/templates/nav-data.template.js",
     "docs/config/templates/base.template.html",
     "docs/config/templates/module.template.html",
+    "docs/config/templates/runnableExample.template.html",
 
     "docs/app/src/index.js",
     "docs/app/src/a.directive.js",
@@ -61,6 +64,7 @@
     "docs/config/index.js",
     "docs/config/services/deployments/debug.js",
     "docs/config/services/deployments/default.js",
+    "docs/config/services/deployments/prod.js",
     "docs/app/index.html",
     "docs/app/src/navbar.html"
   ]

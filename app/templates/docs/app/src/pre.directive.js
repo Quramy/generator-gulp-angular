@@ -1,15 +1,12 @@
 'use strict';
 
-angular.module('docApp').directive('pre', function (){
+angular.module('docApp').directive('pre', function () {
   return {
     restrict: 'E',
-    link: function ($scope, $elem, $attrs){
+    link: function ($scope, $elem, $attrs) {
+      var formatted = prettyPrintOne($elem.find('>code').html());
       $elem.addClass('prettyprint');
-      setTimeout(function (){
-        // TODO replace prettyPrintOne()
-        prettyPrint();
-      }, 0);
-
+      $elem.find('>code').html(formatted);
     }
   };
 });

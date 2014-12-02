@@ -17,11 +17,11 @@ gulp.task('wiredep', function () {
 gulp.task('wiredep:docs', function() {
   var wiredep = require('wiredep').stream;
 
-  return gulp.src('docs/src/index.html')
+  return gulp.src('docs/app/index.html')
     .pipe(wiredep({
       bowerJson: require('../docs/bower.json'),
       directory: 'docs/bower_components',
-      exclude: [/bootstrap-sass-official/, /bootstrap.js/, /open-sans-fontface/]
+      exclude: [/bootstrap-sass-official/, /bootstrap.js/]
     }))
-    .pipe(gulp.dest('docs/src'));
+    .pipe(gulp.dest('docs/app'));
 });

@@ -14,6 +14,8 @@ module.exports = new Package('your-packages', [
 
 .factory(require('./services/deployments/debug'))
 .factory(require('./services/deployments/default'))
+.factory(require('./services/deployments/prod'))
+
 .processor(require('./processors/navigation'))
 
 // Configure our dgeni-example package. We can ask the Dgeni dependency injector
@@ -99,8 +101,8 @@ module.exports = new Package('your-packages', [
 	});
 })
 
-.config(function(generateExamplesProcessor, generateProtractorTestsProcessor, defaultDeployment, debugDeployment) {
-	var deployments = [debugDeployment, defaultDeployment];
+.config(function(generateExamplesProcessor, generateProtractorTestsProcessor, defaultDeployment, debugDeployment, prodDeployment) {
+	var deployments = [debugDeployment, defaultDeployment, prodDeployment];
 	generateExamplesProcessor.deployments = deployments;
 	generateProtractorTestsProcessor.deployments = deployments;
 });

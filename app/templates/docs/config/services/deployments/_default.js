@@ -12,7 +12,9 @@ module.exports = function defaultDeployment() {
           '../../deps/angular-resource/angular-resource.min.js',<% } %>
 					'../../modules.js'
 				],
-				stylesheets: []
+				stylesheets: [
+					'../../modules.css'
+        ]
 			},
 			dependencyPath: '../../deps'
 		},
