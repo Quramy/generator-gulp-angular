@@ -11,8 +11,8 @@ gulp.task('partials:docs', ['dgeni:prod'], function () {
 			spare: true,
 			quotes: true
 		}))
-    .pipe($.angularTemplatecache({
-      moduleName: 'docApp'
+    .pipe($.angularTemplatecache('templateCacheHtml.js', {
+      module: 'docApp'
     }))
 		.pipe(gulp.dest('.tmp_docs/partials'))
 		.pipe($.size());
